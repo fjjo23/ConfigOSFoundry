@@ -3190,6 +3190,11 @@ namespace VeriSignature
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello");
+        }
+
         // End "UnzipSCLDFile" ver: 1.0.9 date: 03-22-16
 
         #endregion

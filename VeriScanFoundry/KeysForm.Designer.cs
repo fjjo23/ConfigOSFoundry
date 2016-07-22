@@ -45,6 +45,7 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.lblKey = new System.Windows.Forms.Label();
             this.lblCurrentKey = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.grpSelectKey.SuspendLayout();
             this.grpGenerateKey.SuspendLayout();
             this.SuspendLayout();
@@ -193,11 +194,22 @@
             this.lblCurrentKey.TabIndex = 10;
             this.lblCurrentKey.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(50, 219);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "test";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // KeysForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(423, 245);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblCurrentKey);
             this.Controls.Add(this.lblKey);
             this.Controls.Add(this.btnCancel);
@@ -241,5 +253,6 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Label lblKey;
         private System.Windows.Forms.Label lblCurrentKey;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -241,6 +241,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.updateController1 = new Kjs.AppLife.Update.Controller.UpdateController(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.mainMenu.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -589,6 +590,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.btnSelectFile);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.btnUnselect);
@@ -2463,6 +2465,16 @@
             this.updateController1.Version = ((System.Version)(resources.GetObject("updateController1.Version")));
             this.updateController1.WebRequestKeepAlive = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(578, 96);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Test";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2754,6 +2766,7 @@
         private System.Windows.Forms.Button btnBrowseNewKey;
         private System.Windows.Forms.TextBox txtNewKeyFolder;
         private System.Windows.Forms.ComboBox cmbTypeLinux;
+        private System.Windows.Forms.Button button1;
     }
 }
 
