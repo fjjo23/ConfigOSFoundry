@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Validations>
+  <OS Name="Linux">
+    <Validation Name="Skip 1">
+      <Condition Tag="Where" Value="&gt;" Metacharacter="C"/>
+      <Target Tag="Applied" Metacharacter="=" />
+      <ValidValues>
+      </ValidValues>
+    </Validation>
+    <Validation Name="Pam modules">
+      <Condition Tag="Where" Value="/etc/pam.d" Metacharacter="^"/>
+      <Target Tag="Applied" Metacharacter="$" />
+      <ValidValues>
+        <Add Value=":sha512" />
+        <Add Value=":dcredit" />
+        <Add Value=":fail_interval" />
+        <Add Value=":ucredit" />
+        <Add Value=":ocredit" />
+        <Add Value=":lcredit" />
+        <Add Value=":difok" />
+        <Add Value=":deny" />
+        <Add Value=":unlock_time" />
+        <Add Value=":remember" />
+        <Add Value=":maxrepeat" />
+	<Add Value=":fail_interval&quot;" />
+        <Add Value=":unlock_time&quot;" />
+        <Add Value=":nullok" />
+        <Add Value=":remember&quot;" />
+      </ValidValues>
+    </Validation>
+    <Validation Name="File locations">
+      <Condition Tag="Type" Value="Configuration" Metacharacter="="/>
+      <Target Tag="Where" Metacharacter="=" />
+      <ValidValues>
+		<Add Value="Service" />
+        <Add Value="/etc/pam.d/system-auth-ac" />
+        <Add Value="/etc/pam.d/password-auth-ac" />
+        <Add Value="/etc/pam.d/common-sessions-pc" />
+        <Add Value="/etc/pam.d/common-account-pc" />
+        <Add Value="/etc/pam.d/common-password-pc" />
+        <Add Value="/etc/pam.d/password-auth-pc" />
+        <Add Value="/etc/pam.d/login" />
+        <Add Value="/etc/pam.d/sshd" />
+        <Add Value="/etc/sudoers" />
+        <Add Value="/etc/audit/auditd.conf" />
+        <Add Value="/etc/selinux/config" />
+        <Add Value="/etc/grub.conf" />
+        <Add Value="/etc/crontab" />
+        <Add Value="/etc/default/useradd" />
+        <Add Value="/etc/security/limits.conf" />
+        <Add Value="/etc/modprobe.d/blacklist.conf" />
+        <Add Value="/etc/exports" />
+        <Add Value="/etc/inittab" />
+        <Add Value="/etc/init/control-alt-delete.override" />
+        <Add Value="/etc/snmp/snmpd.conf" />
+        <Add Value="/etc/bashrc" />
+        <Add Value="/etc/csh.cshrc" />
+        <Add Value="/etc/profile" />
+        <Add Value="/etc/login.defs" />
+        <Add Value="/etc/init.d/functions" />
+        <Add Value="/etc/pam_ldap.conf" />
+        <Add Value="/etc/postfix/main.cf" />
+        <Add Value="/etc/ssh/sshd_config" />
+        <Add Value="/etc/sysctl.conf" />
+        <Add Value="/etc/vsftpd/vsftpd.conf" />
+        <Add Value="/etc/issue" />
+        <Add Value="/etc/sysconfig/init" />
+		<Add Value="/etc/securetty" />
+		<Add Value="/etc/yum.repos.d" />
+		<Add Value="/etc/modprobe.d" />
+		<Add Value="Desktop Environment:/etc/gconf/gconf.xml.mandatory" />
+		<Add Value="/etc/pam.d/password-auth-ac>account     required      pam_permit.so" />
+		<Add Value="/etc/rpmrc" />
+		<Add Value="usr/lib/rpm/rpmrc" />
+		<Add Value="/usr/lib/rpm/redhat/rpmrc" />
+		<Add Value="/usr/lib/rpm/rpmrc" />
+		<Add Value="~root/.rpmrc" />
+                <Add Value="/etc/sysconfig/ip6tables&lt;COMMIT" />
+                <Add Value="/etc/audisp/plugins.d/syslog.conf" />
+                <Add Value="/etc/sysconfig/iptables&lt;^COMMIT" />
+	  </ValidValues>
+    </Validation>
+    <Validation Name="Auditing system-System calls">
+      <Condition Tag="Where" Value="Auditing System" Metacharacter="="/>
+      <Target Tag="Applied" Metacharacter="=" />
+      <ValidValues>
+        <Add Value="&quot;lchown&quot;" />
+        <Add Value="&quot;lremovexattr&quot;" />
+        <Add Value="&quot;fsetxattr&quot;" />
+        <Add Value="&quot;fremovexattr&quot;" />
+        <Add Value="&quot;fchownat&quot;" />
+        <Add Value="&quot;fchown&quot;" />
+        <Add Value="&quot;fchmodat&quot;" />
+        <Add Value="&quot;fchmod&quot;" />
+        <Add Value="&quot;chown&quot;" />
+        <Add Value="&quot;chmod&quot;" />
+        <Add Value="&quot;setdomainname&quot;" />
+        <Add Value="&quot;sethostname&quot;" />
+        <Add Value="&quot;clock_settime&quot;" />
+        <Add Value="&quot;stime&quot;" />
+        <Add Value="&quot;settimeofday&quot;" />
+        <Add Value="&quot;adjtimex&quot;" />
+        <Add Value="&quot;delete_module&quot;" />
+        <Add Value="&quot;init_module&quot;" />
+        <Add Value="&quot;renameat&quot;" />
+        <Add Value="&quot;rename&quot;" />
+        <Add Value="&quot;unlink&quot;" />
+        <Add Value="&quot;unlinkat&quot;" />
+        <Add Value="&quot;rmdir&quot;" />
+        <Add Value="&quot;mount&quot;" />
+        <Add Value="&quot;open&quot;" />
+        <Add Value="&quot;openat&quot;" />
+        <Add Value="&quot;ftruncate&quot;" />
+        <Add Value="&quot;setxattr&quot;" />
+        <Add Value="&quot;fremovexattr&quot;" />
+        <Add Value="&quot;lsetxattr&quot;" />
+        <Add Value="&quot;lremovexattr&quot;" />
+        <Add Value="&quot;truncate&quot;" />
+        <Add Value="&quot;creat&quot;" />
+		<Add Value="&quot;etc/sudoers&quot;" />
+		<Add Value="&quot;/sbin/insmod&quot;" />
+		<Add Value="&quot;/sbin/rmmod&quot;" />
+		<Add Value="&quot;/sbin/modprobe&quot;" />
+		<Add Value="&quot;/etc/localtime&quot;" />
+		<Add Value="&quot;/etc/passwd&quot;" />
+		<Add Value="&quot;/etc/shadow&quot;" />
+		<Add Value="&quot;/etc/group&quot;" />
+		<Add Value="&quot;/etc/gshadow&quot;" />
+		<Add Value="&quot;/etc/security/opasswd&quot;" />
+		<Add Value="&quot;/etc/issue.net&quot;" />
+		<Add Value="&quot;/etc/hosts&quot;" />
+		<Add Value="&quot;/etc/sysconfig/network&quot;" />
+		<Add Value="&quot;/etc/selinux&quot;" />
+		<Add Value="&quot;/etc/sudoers&quot;" />
+		<Add Value="&quot;removexattr&quot;" />
+		<Add Value="&quot;auth\s*required\s*pam_faillock.so preauth silent:unlock_time&quot;" />
+		<Add Value="&quot;auth\s*\[default=die\]\s*pam_faillock.so authfail:unlock_time&quot;" />
+                <Add Value="[{SETUID_PROG_PATH} = find / -xdev -type f -perm -4000 -o -perm -2000]" />
+                <Add Value="/etc/issue\s" />
+      </ValidValues>
+    </Validation>
+    <Validation Name="Auditing system-Switch">
+      <Condition Tag="Where" Value="Auditing System" Metacharacter="="/>
+      <Target Tag="Type" Metacharacter="=" />
+      <ValidValues>
+        <Add Value="rule:system call" />
+        <Add Value="rule:file system" />
+        <Add Value="rule:File system[-a always,exit -F path={SETUID_PROG_PATH} -F perm=x -F auid&gt;=500 -F auid!=4294967295 -k privileged]" />
+      </ValidValues>
+    </Validation>
+    <Validation Name="Different of Auditing system">
+      <Condition Tag="Where" Value="Auditing System" Metacharacter="!=" />
+      <Target Tag="Type" Metacharacter="=" />
+      <ValidValues>
+		<Add Value="File" />
+        <Add Value="Configuration" />
+        <Add Value="Configuration:startup" />
+        <Add Value="Configuration:runtime" />
+        <Add Value="Configuration:kernel" />
+        <Add Value="Configuration:content" />
+        <Add Value="Configuration:parameter" />
+        <Add Value="Ownerships" />
+        <Add Value="Ownerships:group" />
+        <Add Value="Ownerships:user" />
+        <Add Value="hash:enable" />
+        <Add Value="login:enable" />
+        <Add Value="Installation" />
+        <Add Value="Installation:summary" />
+        <Add Value="Installation:Verify[md5]" />
+        <Add Value="Installation:Verify[mode|owner|group]" />
+        <Add Value="Mount points" />
+        <Add Value="Mount options" />
+        <Add Value="Integrity:name" />
+        <Add Value="Integrity:gid" />
+        <Add Value="Permissions" />
+		<Add Value="Account" />
+		<Add Value="/apps/gnome-screensaver:int" />
+		<Add Value="/apps/gnome-screensaver:bool" />
+		<Add Value="/apps/gnome-screensaver:string" />
+		<Add Value="/apps/gdm/simple-greeter:bool" />
+		<Add Value="/apps/gdm/simple-greeter:string" />
+                <Add Value="/apps/gnome_settings_daemon/keybindings:string" />
+                <Add Value="UID:0" />
+                <Add Value="Configuration:runtime[-f /proc/net/if_inet6]" />
+      </ValidValues>
+    </Validation>
+  </OS>
+</Validations>

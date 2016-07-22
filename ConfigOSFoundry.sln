@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeriScanFoundry", "VeriScanFoundry\VeriScanFoundry.csproj", "{16070188-28E0-41DC-B5F9-FBF16E2AFE29}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "VeriScanFoundrySetup", "VeriScanFoundrySetup\VeriScanFoundrySetup.vdproj", "{EFE518BE-078E-465E-9F29-3FFF3235FD3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UninstallCleanUp", "UninstallCleanUp\UninstallCleanUp.csproj", "{339F02CC-88AC-4371-BAC6-AB5B67265225}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16070188-28E0-41DC-B5F9-FBF16E2AFE29}.Debug|x86.ActiveCfg = Debug|x86
+		{16070188-28E0-41DC-B5F9-FBF16E2AFE29}.Debug|x86.Build.0 = Debug|x86
+		{16070188-28E0-41DC-B5F9-FBF16E2AFE29}.Release|x86.ActiveCfg = Release|x86
+		{16070188-28E0-41DC-B5F9-FBF16E2AFE29}.Release|x86.Build.0 = Release|x86
+		{EFE518BE-078E-465E-9F29-3FFF3235FD3C}.Debug|x86.ActiveCfg = Debug
+		{EFE518BE-078E-465E-9F29-3FFF3235FD3C}.Release|x86.ActiveCfg = Release
+		{339F02CC-88AC-4371-BAC6-AB5B67265225}.Debug|x86.ActiveCfg = Debug|x86
+		{339F02CC-88AC-4371-BAC6-AB5B67265225}.Debug|x86.Build.0 = Debug|x86
+		{339F02CC-88AC-4371-BAC6-AB5B67265225}.Release|x86.ActiveCfg = Release|x86
+		{339F02CC-88AC-4371-BAC6-AB5B67265225}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

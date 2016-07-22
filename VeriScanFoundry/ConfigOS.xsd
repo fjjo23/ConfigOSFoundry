@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xsd:element name="Groups">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Items">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="Group">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="GroupId" type="xsd:string" />
+                    <xsd:element name="GroupTitle" type="xsd:string" />
+                    <xsd:element name="RuleId" type="xsd:string" />
+                    <xsd:element name="Severity" type="xsd:string" />
+                    <xsd:element name="RuleVersion" type="xsd:string" />
+                    <xsd:element name="RuleTitle" type="xsd:string" />
+                    <xsd:element name="Where" type="xsd:string" />
+                    <xsd:element name="Applied" type="xsd:string" />
+                    <xsd:element name="Type" type="xsd:string" />
+                    <xsd:element name="Value" type="xsd:string"/>
+                    <xsd:element name="Ignore" type="xsd:string" />
+                    <xsd:element name="IgnoreReason" type="xsd:string" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="CreateDate" type="xsd:string" use="required" />
+      <xsd:attribute name="AuthorName" type="xsd:string" use="required" />
+      <xsd:attribute name="Version" type="xsd:string" use="required" />
+      <xsd:attribute name="SysArea" type="xsd:string" use="required" />
+      <xsd:attribute name="OSType" type="xsd:string" use="required" />
+    </xsd:complexType>
+    <xs:key name='Group-GroupId'>  <!-- unique -->
+      <xs:selector xpath='.//Group'/>
+      <xs:field xpath='GroupId'/>
+    </xs:key>
+  </xsd:element>
+</xs:schema>
